@@ -1,81 +1,72 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Arrow from '../../../../img/icons/arrow.svg';
-import {database} from "firebase";
+import Button from '../components/button.jsx';
 
 import style from './styles.scss';
 
-export default class Posts extends React.PureComponent {
-
-  constructor(...args) {
-    super(...args);
-    this.getBlogPosts = this.getBlogPosts.bind(this);
-    this.getMainPost = this.getMainPost.bind(this);
-  }
-
-  state = {
-    posts: [],
-    lastPost: {},
-  }
-
-  componentDidMount() {
-    this.getBlogPosts();
-    this.getMainPost();
-  };
-
-  getBlogPosts() {
-    var posts = database().ref('posts/').limitToLast(9);
-    posts.on('value', (data) => {
-      // get last 9 posts, reverse the order and remove first element
-      const posts = data.val().reverse().slice(1);
-      // save posts into state
-      this.setState({ posts });
-    });
-  }
-
-  getMainPost() {
-    var posts = database().ref('posts/').limitToLast(1);
-    posts.on('value', (data) => {
-      // get last/latest post
-      const post = data.val();
-      // returned post is object with value key
-      // get the right key. We don't know which key gets returned
-      // so we get a massive with all keys in Object and get the first key (which ever it is)
-      const elementKey = Object.keys(post)[0];
-      // save post into state with the received key
-      this.setState({ lastPost: post[elementKey] });
-    });
-  }
+export default class Home extends React.PureComponent {
 
   render() {
-    const { lastPost, posts } = this.state;
     return (
       <div className="main-content">
-        <Arrow className="arrow"/>
-        <h1><span>{lastPost.name}</span><br/>Welcome to my personal web page where I share my <b>travel</b>, <b>coding</b> and <b>photography</b> experience! <br/> <i>Why don't you start with my latest post?</i></h1>
-        <div className="top-slider">
-          <div className="slider-description">
-            <h3>{lastPost.date}</h3>
-            <Link to=''><h2>{lastPost.title}</h2></Link>
-            <h5>{lastPost.category}</h5>
-            <p>{lastPost.description}</p>
+        <div className="slider-wrapper">
+          <div className="slider">
+            <h1>Beautiful smart home for you</h1>
+            <h2>The clever thing for your everything</h2>
+            <Link className="button-primary" to='/products'>Learn more</Link>
           </div>
-          <div className="slider-photo">
-            <Link to=''><img src={lastPost.photo} alt={lastPost.title} /></Link>
-          </div>
+          <ul className="slider-buttons">
+            <li><Link to='/products'>Energy</Link></li>
+            <li><Link to='/products'>Safety</Link></li>
+            <li><Link to='/products'>Comfort</Link></li>
+          </ul>
         </div>
-
-        <h2>Some of my latest posts</h2>
-        <div className="posts">
-          {posts.map((post, index) => (
-            <div className={`post-${index + 1}`} key={index}>
-              <Link to=''><img src={post.photo} alt={post.title} /></Link>
-              <h3>{post.date}</h3>
-              <Link to=''><h4>{post.title}</h4></Link>
-              <h5>{post.category}</h5>
-              <p>{post.description}</p>
-            </div>
-          ))}
+        <div className="main-text-block">
+          <h2>Eleme Smart Home</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          <Button/>
+        </div>
+        <div className="elemets-block">
+          <ul>
+            <li>
+              <img src="../img/energy-photo.jpg" alt="Energy photo" />
+              <div>
+                <h2>Energy</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur doloribus, odit minus? Cupiditate temporibus, libero animi, voluptate laboriosam ipsum, voluptatum sit rerum quaerat sint aperiam harum cumque asperiores voluptatibus voluptatem!</p>
+                <Link className="button-primary" to='/products'>Learn more</Link>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>Energy</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur doloribus, odit minus? Cupiditate temporibus, libero animi, voluptate laboriosam ipsum, voluptatum sit rerum quaerat sint aperiam harum cumque asperiores voluptatibus voluptatem!</p>
+                <Link className="button-primary" to='/products'>Learn more</Link>
+              </div>
+              <img src="../img/safety-photo.jpg" alt="Safety photo" />
+            </li>
+            <li>
+              <img src="../img/comfort-photo.jpg" alt="Comfort photo" />
+              <div>
+                <h2>Energy</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur doloribus, odit minus? Cupiditate temporibus, libero animi, voluptate laboriosam ipsum, voluptatum sit rerum quaerat sint aperiam harum cumque asperiores voluptatibus voluptatem!</p>
+                <Link className="button-primary" to='/products'>Learn more</Link>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div className="map-block">
+          <h2>How to find us?</h2>
+          <p>Domina shopping mall Ieriķu street 3, Vidzemes priekšpilsēta, Riga, LV-1084</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2174.977728676661!2d24.15891831661045!3d56.966313980895265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eece4f87a96f9f%3A0xd4b908bee3cb6b97!2sDomina+Shopping!5e0!3m2!1sen!2slv!4v1501952841161" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div className="partners">
+          <h2>Our partners</h2>
+          <ul>
+            <li><a href="#"><img src="../img/logos/netatmo-logo.png" alt="netatmo logo" /></a></li>
+            <li><a href="#"><img src="../img/logos/senged-logo.png" alt="senged logo" /></a></li>
+            <li><a href="#"><img src="../img/logos/netatmo-logo.png" alt="netatmo logo" /></a></li>
+            <li><a href="#"><img src="../img/logos/senged-logo.png" alt="senged logo" /></a></li>
+          </ul>
         </div>
       </div>
     );

@@ -13,10 +13,8 @@
 - Development environment (~ 5Mb)
 - Production environment (~ 435Kb)
 - Normalizer and CSS reset
-- Basic CSS Grid layout to begin a project
+- Basic CSS Grid layout
 - Using <b>mobile first approach </b>and <b>rem units</b>, calculated for easy px use (for example 1.4rem = 14px)
-
-Great setup to start a new web project.
 
 You need to have node installed on your computer. Before launching a project make sure you have yarn packages installed. To do that use brew to install yarn and then launch "yarn" command in terminal.
 

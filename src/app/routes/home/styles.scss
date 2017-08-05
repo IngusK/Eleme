@@ -1,249 +1,253 @@
 @import "../../../app/styles/_theme.scss";
 
 .main-content {
-  display: block;
+  display: grid;
   grid-area: content;
   margin: 0 auto;
-  max-width: 128rem;
   width: 100%;
   position: relative;
-  grid-template-rows: auto auto auto 2fr;
-  grid-template-areas:
-                       "slider slider slider"
-                       "content content content";
-  @media #{$tablet} {
-    grid-template-areas: "title title title"
-                         "slider slider slider"
-                         "subtitle subtitle subtitle"
-                         "content content content";
-  }
-  h1 {
-    grid-area: title;
-    margin: 3rem auto 1rem;
-    text-align: center;
-    font-family: $lato;
-    font-size: 2rem;
-    line-height: 3.5rem;
-    width: 100%;
-    display: none;
-    @media #{$tablet} {
-      display: block;
-    }
-    span {
-      font-size: 3.5rem;
-    }
-  }
-  h2 {
-    grid-area: subtitle;
-    font-size: 2.6rem;
-    margin: 5rem 0 2rem;
-  }
-  .arrow {
-    width: 10rem;
-    position: absolute;
-    left: 30%;
-    top: 3rem;
-    transform: rotate(220deg);
-    display: none;
-    @media #{$tablet} {
-      display: block;
-    }
-  }
-  .top-slider {
-    display: flex;
+  grid-template:
+               "slider slider slider slider"
+               " . text text . "
+               "energy energy energy energy"
+               "map map map map"
+               " . partners partners . " / 1fr 6fr 6fr 1fr;
+   @media #{$tablet} {
+     grid-template:
+                  " . slider slider . "
+                  " . text text . "
+                  " . energy energy . "
+                  "map map map map"
+                  " . partners partners . " / 1fr 6fr 6fr 1fr;
+   }
+
+   h2 {
+     font-size: 4.4rem;
+     @media #{$tablet} {
+       font-size: 5.4rem;
+     }
+   }
+
+   //Slider block
+  .slider-wrapper {
     grid-area: slider;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    margin: 4rem 0;
+    margin: 0 auto 2rem;
+    max-width: 128rem;
+    width: 100%;
     @media #{$tablet} {
-      flex-direction: row;
-      &.reverse {
-        flex-direction: row-reverse;
-      }
+      margin: 4rem auto;
     }
-    .slider-description {
-      text-align: left;
+    .slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: url("../../../../img/main-photo.jpg") no-repeat;
+      background-size: cover;
+      position: relative;
+      height: 44rem;
+      text-align: center;
+      padding: 0 2rem;
       @media #{$tablet} {
-        width: 50%;
-        padding-right: 2rem;
-        h2, h3, h5 {
-          text-align: left;
-        }
+        height: 64rem;
       }
-      h3 {
-        font: 300 1.5rem $lato;
-        margin-top: 3rem;
-        @media #{$mobile} {
-          margin-top: 4rem;
-        }
+      h1, h2, p {
+        position: relative;
+        z-index: 10;
+        color: $white;
+        font-family: $lato;
+      }
+      h1 {
+        font-size: 4rem;
+        line-height: 4rem;
+        margin: 1.5rem 0;
         @media #{$tablet} {
-          font: 300 1.7rem $lato;
-          margin-top: 0;
+          font-size: 5.2rem;
         }
       }
       h2 {
-        font: 300 2.8rem $lato;
-        line-height: 3rem;
-        margin: 1rem 0;
-        display: inline-block;
-        @media #{$mobile} {
-          font: 300 3.8rem $lato;
-          line-height: 4rem;
-        }
-        &:after {
-          content: "";
-          background: $pink;
-          width: 7rem;
-          height: .4rem;
-          display: block;
-          margin: 1.5rem 0 1.5rem 0rem;
-          @media #{$mobile} {
-            margin: 1.5rem 0 2.5rem -1.5rem;
-          }
-          @media #{$tablet} {
-            margin: 1.5rem 0 2.5rem -2rem;
-          }
-        }
-        &:hover {
-          color: $pink;
-        }
-      }
-      h5 {
-        font: 300 1.5rem $lato;
-        margin-bottom: 2rem;
-      }
-      p {
-        text-align: left;
-        font: 300 1.8rem $lato;
-        line-height: 3rem;
-      }
-    }
-    .slider-photo {
-      img {
-        object-fit: cover;
-        width: 100%;
-        max-width: 100%;
+        font-size: 2.2rem;
         @media #{$tablet} {
-          max-width: 60rem;
+          font-size: 3rem;
         }
       }
     }
-  }
-  .posts {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 4rem;
-    // grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:
-                        "post1"
-                        "post2"
-                        "post3"
-                        "post4"
-                        "post5"
-                        "post6"
-                        "post7";
-    margin-top: 3rem;
-    @media #{$tablet} {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas:
-                          "post1 post2 post3"
-                          "post4 post4 post5"
-                          "post6 post7 post7";
-    }
-    img {
-      width: 100%;
-      max-height: 32rem;
-      object-fit: cover;
-      object-position: center;
-      @include transition;
+    ul.slider-buttons {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.6rem;
       @media #{$tablet} {
-        height: 35rem;
+        flex-direction: row;
+        font-size: 1.8rem;
       }
-      &:hover {
-        object-position: bottom right;
-      }
-    }
-    font: 300 2rem $lato;
-    line-height: 3rem;
-    margin: 1rem 0;
-    @media #{$mobile} {
-      font: 300 2rem $lato;
-      line-height: 3rem;
-    }
-    h4 {
-      font-size: 2.6rem;
-      display: inline-block;
-      &:hover {
-        color: $pink;
-      }
-      &:after {
-        content: "";
-        background: $pink;
-        width: 5rem;
-        height: .4rem;
-        display: block;
-        margin: 1rem 0 1rem -1.5rem;
-        @media #{$tablet} {
-          margin: 1.5rem 0 1.5rem -2rem;
+      li {
+        text-align: center;
+        color: $white;
+        font-weight: 300;
+        width: 100%;
+        text-transform: uppercase;
+        @include transition;
+        a {
+          color: $white;
+          display: block;
+          width: 100%;
+          line-height: 6rem;
+          @media #{$tablet} {
+            line-height: 8rem;
+          }
+        }
+        &:nth-of-type(1) {
+          background: $green;
+          &:hover {
+            background: darken($green, 5%);
+          }
+        }
+        &:nth-of-type(2) {
+          background: $orange;
+          &:hover {
+            background: darken($orange, 5%);
+          }
+        }
+        &:nth-of-type(3) {
+          background: $blue;
+          &:hover {
+            background: darken($blue, 5%);
+          }
         }
       }
-    }
-    h3 {
-      font: 300 1.4rem $lato;
-      margin: 1rem 0;
-    }
-    h5 {
-      font: 300 1.4rem $lato;
-    }
-    p {
-      text-align: left;
-      font: 300 1.6rem $lato;
-      line-height: 2.5rem;
     }
   }
 
-  .post-1 {
-    grid-area: post1;
-    @media #{$tablet} {
-      grid-area: post1
+  //Text block
+  .main-text-block {
+    grid-area: text;
+    text-align: center;
+    margin: 2rem 0 6rem;
+    p {
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 3rem;
+      max-width: 80rem;
+      width: 100%;
+      margin: 2rem auto 5rem;
     }
   }
-  .post-2 {
-    grid-area: post2;
-    @media #{$tablet} {
-      grid-area: post2
+
+  //Elements block
+  .elemets-block {
+    grid-area: energy;
+    max-width: 128rem;
+    margin: 3rem auto 2rem;
+    ul {
+      li {
+        display: flex;
+        flex-direction: column;
+        color: $white;
+        @media #{$tablet} {
+          flex-direction: row;
+        }
+        img {
+          width: 100%;
+          object-fit: cover;
+          @media #{$tablet} {
+            width: 50%;
+          }
+        }
+        div {
+          width: 100%;
+          text-align: center;
+          @media #{$tablet} {
+            width: 50%;
+            text-align: left;
+          }
+          h2 {
+            font-size: 3.6rem;
+            text-transform: uppercase;
+            margin: 4rem 4rem 2rem;
+          }
+          p {
+            font-size: 1.8rem;
+            font-weight: 300;
+            line-height: 3rem;
+            margin: 0 4rem;
+          }
+          a {
+            display: inline-block;
+            margin: 4rem;
+            @media #{$tablet} {
+              margin: 4rem 4rem 0;
+            }
+          }
+        }
+        &:nth-of-type(1) {
+          background: $green;
+          a {
+            &:hover {
+              color: $green;
+            }
+          }
+        }
+        &:nth-of-type(2) {
+          background: $orange;
+          flex-direction: column-reverse;
+          @media #{$tablet} {
+            flex-direction: row;
+          }
+          a {
+            &:hover {
+              color: $orange;
+            }
+          }
+        }
+        &:nth-of-type(3) {
+          background: $blue;
+          a {
+            &:hover {
+              color: $blue;
+            }
+          }
+        }
+      }
     }
   }
-  .post-3 {
-    grid-area: post3;
+
+  //Map block
+  .map-block {
+    grid-area: map;
+    text-align: center;
+    margin: 3rem 0 0 0;
     @media #{$tablet} {
-      grid-area: post3
+      margin: 7rem 0;
+    }
+    p {
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 3rem;
+      max-width: 80rem;
+      padding: 0 2rem;
+      margin: 2rem auto 5rem;
+    }
+    iframe {
+      border: none;
     }
   }
-  .post-4 {
-    grid-area: post4;
-    @media #{$tablet} {
-      grid-area: post4
-    }
-  }
-  .post-5 {
-    grid-area: post5;
-    @media #{$tablet} {
-      grid-area: post5
-    }
-  }
-  .post-6 {
-    grid-area: post6;
-    @media #{$tablet} {
-      grid-area: post6
-    }
-  }
-  .post-7 {
-    grid-area: post7;
-    @media #{$tablet} {
-      grid-area: post7
+
+  //Partners block
+  .partners {
+    grid-area: partners;
+    text-align: center;
+    margin: 3rem 0 6rem;
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 3rem;
+      @media #{$tablet} {
+        flex-direction: row;
+      }
+      li {
+        margin: 2rem 5rem;
+      }
     }
   }
 }
