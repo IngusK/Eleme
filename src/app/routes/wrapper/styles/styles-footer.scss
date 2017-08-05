@@ -1,54 +1,29 @@
 @import "../../../../app/styles/_theme.scss";
 
 footer {
-  display: grid;
-  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
   grid-area: footer;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content:space-between;
+  align-items: center;
   color: $grey;
   max-width: 128rem;
   width: 100%;
-  margin: 4rem auto 0;
+  margin: 4rem auto .5rem;
+  padding: 1rem 0;
   border-top: 0.1rem solid $ligthGray;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-                       "social"
-                       "text";
- @media #{$tablet} {
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-template-areas:
-                          ". . social"
-                          ". text .";
-    }
-  ul {
-    grid-area: social;
-    display: flex;
-    justify-content: center;
-    @media #{$tablet} {
-      justify-content: flex-end;
-    }
-    li {
-      a {
-        display: block;
-        margin: 0 0 0 1rem;
-        @include transition;
-        svg {
-          width: 3.4rem;
-          opacity: 0.8;
-          fill: #414752;
-        }
-        &:hover {
-          svg {
-            opacity: 1;
-          }
-        }
-      }
-    }
+  img {
+    width: 9rem;
+    margin: 1rem 0;
+    display: inline-block;
   }
   p {
-    grid-area: text;
     text-align: center;
     font-weight: 300;
+    font-size: 1.2rem;
+    margin: 4rem 0 0 0;
+    a:hover {
+      border-bottom: .1rem solid $orange;
+    }
   }
 }

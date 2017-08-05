@@ -1,94 +1,81 @@
 @import "../../../app/styles/_theme.scss";
 
 .about-content {
-  display: grid;
   grid-area: content;
-  margin: 5rem auto 0;
-  max-width: 128rem;
+  margin: 0 auto;
   width: 100%;
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr;
-  align-items: flex-start;
-  grid-template-areas:
-                       "title"
-                       "content";
-  @media #{$mobile} {
-    margin: 7rem auto 0;
-  }
-  @media #{$mobileLarge} {
-    margin: 4rem auto 0;
-  }
-  @media #{$tabletLarge} {
-    grid-template-columns: 37rem 3fr;
-    grid-template-areas: "title content"
-                         "title content";
-  }
-  .title {
-    grid-area: title;
-    position: relative;
-    height: 100%;
-    display: none;
-    @media #{$tabletLarge} {
-      display: block;
+  position: relative;
+  max-width: 128rem;
+   h2 {
+     font-size: 4.4rem;
+     padding: 0 2rem;
+     @media #{$desktop} {
+       padding: 0;
+     }
+   }
+   p {
+     font-size: 1.8rem;
+     font-weight: 300;
+     line-height: 3rem;
+     padding: 0 2rem;
+     @media #{$desktop} {
+       padding: 0;
+     }
+   }
+  .slider-wrapper {
+    margin: 0 auto 2rem;
+    max-width: 128rem;
+    width: 100%;
+    @media #{$tablet} {
+      margin: 4rem auto;
     }
-    h2 {
-      transform: none;
-      font-family: $logo;
-      white-space: nowrap;
+    .slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: url("../../../../img/main-photo.jpg") no-repeat;
+      background-size: cover;
       position: relative;
-      @media #{$tablet} {
-        font-size: 20rem;
-        transform: rotate(-90deg);
-        top: 60%;
-        left: 2rem;
-      }
-      @media #{$tabletLarge} {
-        left: 2rem;
-      }
-    }
-  }
-  .description {
-    position: relative;
-    z-index: 1;
-    font-family: $medium;
-    h2 {
-      font-size: 3rem;
-      font-weight: 400;
-      margin: 3.5rem 0 1.2rem;
-      &:first-child {
-        margin-top: 1.5rem;
-      }
-    }
-    .email-container {
+      height: 24rem;
       text-align: center;
-      padding: 3rem 0;
-      border-top: .1rem solid $ligthGray;
-      border-bottom: .1rem solid $ligthGray;
-      margin: 3rem 0;
-      h3 {
-        display: inline-block;
-        font-size: 2.8rem;
+      padding: 0 2rem;
+      h1, h2 {
+        position: relative;
+        z-index: 10;
+        color: $white;
+        font-family: $lato;
       }
-    }
-    p, ul, h3, a {
-      font-size: 1.8rem;
-      line-height: 3.3rem;
-      margin: 0;
-      color: $grey;
-    }
-    p {
-      a {
-        border-bottom: .2rem solid $pink;
-        @include transition;
-        &:hover {
-          color: $pink;
+      h1 {
+        font-size: 4rem;
+        line-height: 4rem;
+        margin: 1.5rem 0;
+        @media #{$tablet} {
+          font-size: 5.2rem;
+        }
+      }
+      h2 {
+        font-size: 2.2rem;
+        @media #{$tablet} {
+          font-size: 3rem;
         }
       }
     }
     ul {
+      display: flex;
+      flex-direction: row;
+      height: 1rem;
       li {
-        list-style-type: disc;
-        margin-left: 2.2rem;
+        width: 100%;
+        &:nth-of-type(1) {
+          background: $green;
+        }
+        &:nth-of-type(2) {
+          background: $orange;
+        }
+        &:nth-of-type(3) {
+          background: $blue;
+        }
       }
     }
   }

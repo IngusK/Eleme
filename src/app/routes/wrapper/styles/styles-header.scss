@@ -3,8 +3,7 @@
 header {
   display: block;
   grid-area: header;
-  padding: 2rem 0 0;
-  font-size: 1.8rem;
+  padding: 2rem 0;
   margin: 0 auto;
   width: 100%;
   max-width: 100%;
@@ -13,35 +12,12 @@ header {
   z-index: 99;
   @media #{$tablet} {
     display: flex;
-    border-bottom: 0.1rem solid $ligthGray;
+    border-bottom: .1rem solid $ligthGray;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     max-width: 128rem;
     text-align: left;
-  }
-}
-
-.logo {
-  color: $black;
-  h1 {
-    font-size: 3rem;
-    span {
-      font-size: 1.5rem;
-    }
-    @media #{$mobile} {
-      font-size: 4rem;
-      span {
-        font-size: 2rem;
-      }
-    }
-  }
-  h2 {
-    font-size: 1.3rem;
-    padding: 0.6rem 0 0 0;
-    @media #{$mobile} {
-      font-size: 1.4rem;
-      padding: 0.9rem 0 0 0;
-    }
   }
 }
 
@@ -53,52 +29,25 @@ nav {
   text-align: center;
   font-family: $lato;
   padding: 1rem 0;
-  border-bottom: 0.1rem solid $ligthGray;
-  border-top: 0.1rem solid $ligthGray;
   margin-top: 1.5rem;
-  @media #{$mobileLarge} {
-    flex-direction: row;
-  }
-  @media #{$tablet} {
-    display: block;
-    text-align: right;
-    padding: 1.6rem 0 0 0;
-    border: none;
-    margin: 0;
-  }
   ul {
     display: flex;
     justify-content: flex-end;
     font-weight: 300;
-    li:hover a {
-      color: $pink;
+    font-size: 1.8rem;
+    li {
+      margin: 0 1.3rem;
+      @media #{$tablet} {
+        margin: 0 0 0 2.5rem;
+      }
+      &:hover a {
+        border-bottom: .2rem solid $orange;
+      }
     }
     &.nav-large {
       margin: 0;
       li {
         margin-left: 2rem;
-      }
-      @media #{$mobile} {
-        font-size: 1.8rem;
-      }
-      @media #{$tablet} {
-        font-size: 2.1rem;
-        margin-bottom: 1rem;
-      }
-    }
-    &.nav-small {
-      font-size: 1.5rem;
-      margin-top: 1rem;
-      li {
-        margin: 0 0 0 1.5rem;
-      }
-      @media #{$mobileLarge} {
-        font-size: 1.8rem;
-        margin-top: 0;
-      }
-      @media #{$tablet} {
-        margin: 0.4rem 0 0 1.5rem;
-        font-size: 1.8rem;
       }
     }
   }
