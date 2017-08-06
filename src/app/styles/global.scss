@@ -37,6 +37,22 @@ h2 {
   display: block;
 }
 
+.line {
+  width: 100%;
+  max-width: 40rem;
+  height: .3rem;
+  margin: 2rem auto;
+  &.energy {
+    background: $green;
+  }
+  &.safety {
+    background: $orange;
+  }
+  &.comfort {
+    background: $blue;
+  }
+}
+
 @supports(display: grid) {
   .message {
     display: none;

@@ -9,7 +9,7 @@ export default class Footer extends React.PureComponent {
     return (
       <footer>
         <Link to='/'><img src="../img/logos/eleme-logo.png" alt="Eleme logo" /></Link>
-        <p>Created by <a href="https://ingus.info" target="_blank">www.ingus.info</a> © All rights reserved.</p>
+        <p>Developed by <a href="https://ingus.info" target="_blank">www.ingus.info</a> © All rights reserved.</p>
       </footer>
     );
   }
