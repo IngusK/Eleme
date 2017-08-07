@@ -40,7 +40,8 @@ nav {
       @media #{$tablet} {
         margin: 0 0 0 2.5rem;
       }
-      &:hover a {
+      &:hover a,
+      &.active a {
         border-bottom: .2rem solid $orange;
       }
     }

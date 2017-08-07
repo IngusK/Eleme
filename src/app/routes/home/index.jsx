@@ -21,7 +21,10 @@ export default class Home extends React.PureComponent {
           <div className="slider">
             <h1>Beautiful smart home for you</h1>
             <h2>The clever thing for your everything</h2>
-            <Link className="button-primary" to='/products'>Learn more</Link>
+            <Button
+              to={"/products"}
+              text={"Learn more"}
+            />
           </div>
           <ul className="slider-buttons">
             <li><Link to='/specific-product'>Energy</Link></li>
@@ -32,7 +35,11 @@ export default class Home extends React.PureComponent {
         <div className="main-text-block">
           <h2>Eleme Smart Home</h2>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-          <Button/>
+          <Button
+            inverse
+            to={"/products"}
+            text={"Explore more"}
+          />
         </div>
         <div className="elemets-block">
           <ul>
@@ -41,14 +48,20 @@ export default class Home extends React.PureComponent {
               <div>
                 <h2>Energy</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur doloribus, odit minus? Cupiditate temporibus, libero animi, voluptate laboriosam ipsum, voluptatum sit rerum quaerat sint aperiam harum cumque asperiores voluptatibus voluptatem!</p>
-                <Link className="button-primary" to='/specific-product'>Learn more</Link>
+                <Button
+                  to={"/products"}
+                  text={"Learn more"}
+                />
               </div>
             </li>
             <li>
               <div>
                 <h2>Energy</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur doloribus, odit minus? Cupiditate temporibus, libero animi, voluptate laboriosam ipsum, voluptatum sit rerum quaerat sint aperiam harum cumque asperiores voluptatibus voluptatem!</p>
-                <Link className="button-primary" to='/specific-product'>Learn more</Link>
+                <Button
+                  to={"/products"}
+                  text={"Learn more"}
+                />
               </div>
               <img src="../img/safety-photo.jpg" alt="Safety photo" />
             </li>
@@ -57,7 +70,10 @@ export default class Home extends React.PureComponent {
               <div>
                 <h2>Energy</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur doloribus, odit minus? Cupiditate temporibus, libero animi, voluptate laboriosam ipsum, voluptatum sit rerum quaerat sint aperiam harum cumque asperiores voluptatibus voluptatem!</p>
-                <Link className="button-primary" to='/specific-product'>Learn more</Link>
+                <Button
+                  to={"/products"}
+                  text={"Learn more"}
+                />
               </div>
             </li>
           </ul>

@@ -1,10 +1,12 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 
 import styles from './styles/styles-header.scss';
 
+@withRouter
 export default class Header extends React.PureComponent {
   render() {
+    const activePath = this.props.location.pathname;
     return (
       <header>
         <div className="logo">
@@ -12,9 +14,9 @@ export default class Header extends React.PureComponent {
         </div>
         <nav>
           <ul>
-            <li><Link to='/products'>Products</Link></li>
-            <li><Link to='/about'>About</Link></li>
-            <li><Link to='/contacts'>Contacts</Link></li>
+            <li className={activePath === "/products" ? 'active' : ''}><Link to='/products'>Products</Link></li>
+            <li className={activePath === "/about" ? 'active' : ''}><Link to='/about'>About</Link></li>
+            <li className={activePath === "/contacts" ? 'active' : ''}><Link to='/contacts'>Contacts</Link></li>
           </ul>
         </nav>
       </header>
