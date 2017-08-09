@@ -174,9 +174,6 @@
           a {
             display: inline-block;
             margin: 4rem;
-            @media #{$tablet} {
-              margin: 4rem 4rem 0;
-            }
           }
         }
         &:nth-of-type(1) {
