@@ -1,15 +1,22 @@
 @import "../../../app/styles/_theme.scss";
 
 .about-content {
+  display: grid;
   grid-area: content;
   margin: 0 auto;
   width: 100%;
   position: relative;
-  max-width: 128rem;
+  grid-template:
+               "slider slider slider slider" / 1fr 6fr 6fr 1fr;
+   @media #{$tablet} {
+     grid-template:
+                  " . slider slider . " / 1fr 6fr 6fr 1fr;
+   }
    h2 {
      font-size: 4.4rem;
      padding: 0 2rem;
-     @media #{$desktop} {
+     margin-top: 4rem;
+     @media #{$tablet} {
        padding: 0;
      }
    }
@@ -18,17 +25,15 @@
      font-weight: 300;
      line-height: 3rem;
      padding: 0 2rem;
-     @media #{$desktop} {
+     @media #{$tablet} {
        padding: 0;
      }
    }
   .slider-wrapper {
+    grid-area: slider;
     margin: 0 auto 2rem;
     max-width: 128rem;
     width: 100%;
-    @media #{$tablet} {
-      margin: 4rem auto;
-    }
     .slider {
       display: flex;
       justify-content: center;

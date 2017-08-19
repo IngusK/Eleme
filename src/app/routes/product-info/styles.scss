@@ -1,110 +1,98 @@
 @import "../../../app/styles/_theme.scss";
 
 .product-info {
+  display: grid;
   grid-area: content;
   margin: 3rem auto 0;
   width: 100%;
   position: relative;
-  max-width: 128rem;
-  .breadcrumbs {
-    display: flex;
-    font-size: 1.4rem;
-    font-weight: 300;
-    line-height: 3rem;
-    padding: 0 0 0 2rem;
-    @media #{$tablet} {
-      padding: 0;
-    }
-    li {
-      margin: 0 1rem;
-      &:first-child {
-        margin-left: 0;
-      }
-      a {
-        &:hover {
-          border-bottom: 2px solid $orange;
-        }
-      }
-    }
-  }
-  .product-descr {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column-gap: 4rem;
-    margin-top: 2rem;
-    padding: 0 2rem;
-    @media #{$tablet} {
-      grid-template-columns: 1fr 1fr;
-      padding: 0;
-    }
-    img {
-      width: 100%;
-      margin-bottom: 2rem;
-      @media #{$tablet} {
-        margin: 0;
-      }
-    }
-    h2 {
-     font-size: 3rem;
-     padding: 0 2rem 1rem 0;
-     &.price {
-       color: $blue;
-     }
-    }
-    h3 {
-      font-size: 3rem;
-    }
-    p {
-     font-size: 1.6rem;
-     font-weight: 300;
-     line-height: 2.6rem;
-     padding: 0 2rem 2rem 0;
-    }
-    ul {
-      li {
-        font-size: 1.6rem;
-        font-weight: 300;
-        line-height: 2.6rem;
-        margin: 1.3rem 0 1.3rem 4rem;
-        list-style-type: disc;
-      }
-    }
-  }
-  .interested {
-    border-top: .1rem solid $ligthGray;
-    margin-top: 4rem;
-    width: 100%;
-    h3 {
-      font-size: 2rem;
-      padding-top: 5rem;
-      padding-left: 2rem;
-      @media #{$tablet} {
-        padding-left: 0;
-      }
-    }
-    .elements {
-      margin-top: 2rem;
+  grid-template:
+               "grid grid grid grid" / 1fr 6fr 6fr 1fr;
+   @media #{$tablet} {
+     grid-template:
+                  " . grid grid . " / 1fr 6fr 6fr 1fr;
+   }
+   .contacts-grid {
+     grid-area: grid;
+    .product-descr {
       display: grid;
       grid-template-columns: 1fr;
-      grid-gap: 3rem;
-      padding: 2rem;
+      grid-column-gap: 4rem;
+      margin-top: 2rem;
+      padding: 0 2rem;
       @media #{$tablet} {
-        grid-template-columns: repeat(4, minmax(20rem, 1fr));
+        grid-template-columns: 1fr 1fr;
         padding: 0;
       }
-      .elem-block {
-        img {
-          width: 100%;
+      img {
+        width: 100%;
+        margin-bottom: 2rem;
+        @media #{$tablet} {
+          margin: 0;
         }
-        h4 {
-          font-size: 1.8rem;
-          margin-top: 1rem;
-        }
-        h5 {
+      }
+      h2 {
+       font-size: 3rem;
+       padding: 0 2rem 1rem 0;
+       &.price {
+         color: $blue;
+       }
+      }
+      h3 {
+        font-size: 3rem;
+      }
+      p {
+       font-size: 1.6rem;
+       font-weight: 300;
+       line-height: 2.6rem;
+       padding: 0 2rem 2rem 0;
+      }
+      ul {
+        li {
           font-size: 1.6rem;
-          margin-top: 1.6rem;
-          font-weight: 400;
-          color: $blue;
+          font-weight: 300;
+          line-height: 2.6rem;
+          margin: 1.3rem 0 1.3rem 4rem;
+          list-style-type: disc;
+        }
+      }
+    }
+    .interested {
+      border-top: .1rem solid $ligthGray;
+      margin-top: 4rem;
+      width: 100%;
+      h3 {
+        font-size: 2rem;
+        padding-top: 5rem;
+        padding-left: 2rem;
+        @media #{$tablet} {
+          padding-left: 0;
+        }
+      }
+      .elements {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 3rem;
+        padding: 2rem;
+        @media #{$tablet} {
+          grid-template-columns: repeat(4, minmax(20rem, 1fr));
+          padding: 0;
+        }
+        .elem-block {
+          img {
+            width: 100%;
+          }
+          h4 {
+            font-size: 1.8rem;
+            margin-top: 1rem;
+          }
+          h5 {
+            font-size: 1.6rem;
+            margin-top: 1.6rem;
+            font-weight: 400;
+            color: $blue;
+          }
         }
       }
     }
