@@ -27,9 +27,9 @@ export default class Home extends React.PureComponent {
             />
           </div>
           <ul className="slider-buttons">
-            <li><Link to='/specific-product'>Energy</Link></li>
-            <li><Link to='/specific-product'>Safety</Link></li>
-            <li><Link to='/specific-product'>Comfort</Link></li>
+            <li><Link to='/products'>Energy</Link></li>
+            <li><Link to='/products'>Safety</Link></li>
+            <li><Link to='/products'>Comfort</Link></li>
           </ul>
         </div>
         <div className="main-text-block">

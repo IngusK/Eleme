@@ -8,64 +8,75 @@ export default class ProductsList extends React.PureComponent {
   render() {
     return (
       <div className="products-list">
-        <h2>Mobile devices</h2>
-        <div className="table">
-          <Link to='/product-info' className="logo"><img src="../img/logos/netatmo-logo.png" alt="netatmo logo" /></Link>
-          <Link to='/product-info'><img src="../img/energy-photo.jpg" alt="Brand logo" /></Link>
-          <div>
-            <h3>Device name</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum laboriosam, repudiandae atque, nesciunt quasi harum repellendus numquam tempore sequi qui eligendi, iusto dolores dolor quisquam asperiores optio beatae minus. Est?</p>
+        <div className="contacts-grid">
+          <ul className="breadcrumbs">
+            <li>
+              <Link to='/products'>Products</Link>
+            </li>
+            /
+            <li>
+              <Link to='/products'>Comfort</Link>
+            </li>
+          </ul>
+          <h2>Mobile devices</h2>
+          <div className="table">
+            <Link to='/product-info' className="logo"><img src="../img/logos/netatmo-logo.png" alt="netatmo logo" /></Link>
+            <Link to='/product-info'><img src="../img/energy-photo.jpg" alt="Brand logo" /></Link>
+            <div>
+              <h3>Device name</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum laboriosam, repudiandae atque, nesciunt quasi harum repellendus numquam tempore sequi qui eligendi, iusto dolores dolor quisquam asperiores optio beatae minus. Est?</p>
+            </div>
+            <h4>99.99 Eur</h4>
+            <Link to='/product-info' className="logo"><img src="../img/logos/netatmo-logo.png" alt="netatmo logo" /></Link>
+            <Link to='/product-info'><img src="../img/energy-photo.jpg" alt="Brand logo" /></Link>
+            <div>
+              <h3>Device name</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum laboriosam, repudiandae atque, nesciunt quasi harum repellendus numquam tempore sequi qui eligendi, iusto dolores dolor quisquam asperiores optio beatae minus. Est?</p>
+            </div>
+            <h4>99.99 Eur</h4>
+            <Link to='/product-info' className="logo"><img src="../img/logos/netatmo-logo.png" alt="netatmo logo" /></Link>
+            <Link to='/product-info'><img src="../img/energy-photo.jpg" alt="Brand logo" /></Link>
+            <div>
+              <h3>Device name</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum laboriosam, repudiandae atque, nesciunt quasi harum repellendus numquam tempore sequi qui eligendi, iusto dolores dolor quisquam asperiores optio beatae minus. Est?</p>
+            </div>
+            <h4>99.99 Eur</h4>
+            <Link to='/product-info' className="logo"><img src="../img/logos/netatmo-logo.png" alt="netatmo logo" /></Link>
+            <Link to='/product-info'><img src="../img/energy-photo.jpg" alt="Brand logo" /></Link>
+            <div>
+              <h3>Device name</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum laboriosam, repudiandae atque, nesciunt quasi harum repellendus numquam tempore sequi qui eligendi, iusto dolores dolor quisquam asperiores optio beatae minus. Est?</p>
+            </div>
+            <h4>99.99 Eur</h4>
+            <Link to='/product-info' className="logo"><img src="../img/logos/netatmo-logo.png" alt="netatmo logo" /></Link>
+            <Link to='/product-info'><img src="../img/energy-photo.jpg" alt="Brand logo" /></Link>
+            <div>
+              <h3>Device name</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum laboriosam, repudiandae atque, nesciunt quasi harum repellendus numquam tempore sequi qui eligendi, iusto dolores dolor quisquam asperiores optio beatae minus. Est?</p>
+            </div>
+            <h4>99.99 Eur</h4>
+            <Link to='/product-info' className="logo"><img src="../img/logos/netatmo-logo.png" alt="netatmo logo" /></Link>
+            <Link to='/product-info'><img src="../img/energy-photo.jpg" alt="Brand logo" /></Link>
+            <div>
+              <h3>Device name</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum laboriosam, repudiandae atque, nesciunt quasi harum repellendus numquam tempore sequi qui eligendi, iusto dolores dolor quisquam asperiores optio beatae minus. Est?</p>
+            </div>
+            <h4>99.99 Eur</h4>
+            <Link to='/product-info' className="logo"><img src="../img/logos/netatmo-logo.png" alt="netatmo logo" /></Link>
+            <Link to='/product-info'><img src="../img/energy-photo.jpg" alt="Brand logo" /></Link>
+            <div>
+              <h3>Device name</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum laboriosam, repudiandae atque, nesciunt quasi harum repellendus numquam tempore sequi qui eligendi, iusto dolores dolor quisquam asperiores optio beatae minus. Est?</p>
+            </div>
+            <h4>99.99 Eur</h4>
+            <Link to='/product-info' className="logo"><img src="../img/logos/netatmo-logo.png" alt="netatmo logo" /></Link>
+            <Link to='/product-info'><img src="../img/energy-photo.jpg" alt="Brand logo" /></Link>
+            <div>
+              <h3>Device name</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum laboriosam, repudiandae atque, nesciunt quasi harum repellendus numquam tempore sequi qui eligendi, iusto dolores dolor quisquam asperiores optio beatae minus. Est?</p>
+            </div>
+            <h4>99.99 Eur</h4>
           </div>
-          <h4>99.99 Eur</h4>
-          <Link to='/product-info' className="logo"><img src="../img/logos/netatmo-logo.png" alt="netatmo logo" /></Link>
-          <Link to='/product-info'><img src="../img/energy-photo.jpg" alt="Brand logo" /></Link>
-          <div>
-            <h3>Device name</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum laboriosam, repudiandae atque, nesciunt quasi harum repellendus numquam tempore sequi qui eligendi, iusto dolores dolor quisquam asperiores optio beatae minus. Est?</p>
-          </div>
-          <h4>99.99 Eur</h4>
-          <Link to='/product-info' className="logo"><img src="../img/logos/netatmo-logo.png" alt="netatmo logo" /></Link>
-          <Link to='/product-info'><img src="../img/energy-photo.jpg" alt="Brand logo" /></Link>
-          <div>
-            <h3>Device name</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum laboriosam, repudiandae atque, nesciunt quasi harum repellendus numquam tempore sequi qui eligendi, iusto dolores dolor quisquam asperiores optio beatae minus. Est?</p>
-          </div>
-          <h4>99.99 Eur</h4>
-          <Link to='/product-info' className="logo"><img src="../img/logos/netatmo-logo.png" alt="netatmo logo" /></Link>
-          <Link to='/product-info'><img src="../img/energy-photo.jpg" alt="Brand logo" /></Link>
-          <div>
-            <h3>Device name</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum laboriosam, repudiandae atque, nesciunt quasi harum repellendus numquam tempore sequi qui eligendi, iusto dolores dolor quisquam asperiores optio beatae minus. Est?</p>
-          </div>
-          <h4>99.99 Eur</h4>
-          <Link to='/product-info' className="logo"><img src="../img/logos/netatmo-logo.png" alt="netatmo logo" /></Link>
-          <Link to='/product-info'><img src="../img/energy-photo.jpg" alt="Brand logo" /></Link>
-          <div>
-            <h3>Device name</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum laboriosam, repudiandae atque, nesciunt quasi harum repellendus numquam tempore sequi qui eligendi, iusto dolores dolor quisquam asperiores optio beatae minus. Est?</p>
-          </div>
-          <h4>99.99 Eur</h4>
-          <Link to='/product-info' className="logo"><img src="../img/logos/netatmo-logo.png" alt="netatmo logo" /></Link>
-          <Link to='/product-info'><img src="../img/energy-photo.jpg" alt="Brand logo" /></Link>
-          <div>
-            <h3>Device name</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum laboriosam, repudiandae atque, nesciunt quasi harum repellendus numquam tempore sequi qui eligendi, iusto dolores dolor quisquam asperiores optio beatae minus. Est?</p>
-          </div>
-          <h4>99.99 Eur</h4>
-          <Link to='/product-info' className="logo"><img src="../img/logos/netatmo-logo.png" alt="netatmo logo" /></Link>
-          <Link to='/product-info'><img src="../img/energy-photo.jpg" alt="Brand logo" /></Link>
-          <div>
-            <h3>Device name</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum laboriosam, repudiandae atque, nesciunt quasi harum repellendus numquam tempore sequi qui eligendi, iusto dolores dolor quisquam asperiores optio beatae minus. Est?</p>
-          </div>
-          <h4>99.99 Eur</h4>
-          <Link to='/product-info' className="logo"><img src="../img/logos/netatmo-logo.png" alt="netatmo logo" /></Link>
-          <Link to='/product-info'><img src="../img/energy-photo.jpg" alt="Brand logo" /></Link>
-          <div>
-            <h3>Device name</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum laboriosam, repudiandae atque, nesciunt quasi harum repellendus numquam tempore sequi qui eligendi, iusto dolores dolor quisquam asperiores optio beatae minus. Est?</p>
-          </div>
-          <h4>99.99 Eur</h4>
         </div>
         {/* <table>
           <tr>

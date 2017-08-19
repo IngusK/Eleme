@@ -53,6 +53,28 @@ h2 {
   }
 }
 
+.breadcrumbs {
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 3rem;
+  padding: 0 0 0 2rem;
+  @media #{$tablet} {
+    padding: 0;
+  }
+  li {
+    margin: 0 1rem;
+    &:first-child {
+      margin-left: 0;
+    }
+    a {
+      &:hover {
+        border-bottom: 2px solid $orange;
+      }
+    }
+  }
+}
+
 @supports(display: grid) {
   .message {
     display: none;
