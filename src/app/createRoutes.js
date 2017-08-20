@@ -4,7 +4,6 @@ import Wrapper from './routes/wrapper/index.jsx';
 
 import Home from './routes/home/index.jsx';
 import Products from './routes/products/index.jsx';
-import SpecificProduct from './routes/specific-product/index.jsx';
 import ProductList from './routes/product-list/index.jsx';
 import ProductInfo from './routes/product-info/index.jsx';
 import About from './routes/about/index.jsx';
@@ -15,7 +14,6 @@ const createRoutes = () => (
     <Wrapper>
       <Route exact path="/" component={Home}/>
       <Route path="/products" component={Products}/>
-      <Route path="/specific-product" component={SpecificProduct}/>
       <Route path="/product-list" component={ProductList}/>
       <Route path="/product-info" component={ProductInfo}/>
       <Route path="/about" component={About}/>
