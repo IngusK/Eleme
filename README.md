@@ -4,7 +4,7 @@
 
 - Node 6.11.0
 - Yarn 0.24.6
-- Webpack 2.6.1
+- Webpack 3.5.1
 - React 15.6.1
 - Babel 6.25.0
 - Hot Reload 3.0.0
