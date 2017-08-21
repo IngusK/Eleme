@@ -14,14 +14,11 @@ export default class Products extends React.PureComponent {
           <div className="slider-wrapper">
             <ul className="slider-buttons">
               <li>
-                <img src="../img/energy-photo.jpg" alt="Energy photo" />
                 <Link to='/product-list'>Energy</Link>
               </li>
               <li>
-                <img src="../img/safety-photo.jpg" alt="Safety photo" />
                 <Link to='/product-list'>Safety</Link></li>
               <li>
-                <img src="../img/comfort-photo.jpg" alt="Comfort photo" />
                 <Link to='/product-list'>Comfort</Link>
               </li>
             </ul>
